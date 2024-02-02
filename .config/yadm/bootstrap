@@ -37,7 +37,6 @@ configure_tmux() {
   cd ~
   ln -s -f .tmux/.tmux.conf
   cd $CUR_DIR
-  ~/.tmux/plugins/tpm/bin/install_plugins
 }
 
 install_submodules() {

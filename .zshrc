@@ -106,7 +106,6 @@ fi
 plugins=(
   bgnotify
   colored-man-pages
-  direnv
   poetry
   poetry-env
   python
@@ -215,9 +214,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [[ -f ~/.bash_aliases ]]; then
-  . ~/.bash_aliases
-fi
 if [[ -f ~/.profile ]]; then
   . ~/.profile
 fi
@@ -278,9 +274,6 @@ alias home='cd ~/'
 alias opt='cd /opt'
 alias raid0="cd /mnt/Raid0"
 
-## Open in vim ##
-alias bashrc='sudo vim ~/.bashrc'
-
 ## Stop after sending count echo -e _REQUEST packets ##
 alias ping='ping -c 5'
 
@@ -335,11 +328,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 alias shasum="sha1sum"
-
-alias ay='sudo apt-get -y install'
-alias yup='sudo apt-get -y update && sudo apt-get -y upgrade'
-alias yup-new='sudo apt-get -y update && sudo apt-get --with-new-pkgs -y upgrade'
-alias ar='sudo apt-get remove -y --purge'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

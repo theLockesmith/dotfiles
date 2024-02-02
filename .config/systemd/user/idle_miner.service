@@ -1,0 +1,15 @@
+[Unit]
+Description=gminer at higher intensity for mining while PC is idle.
+Documentation=https://github.com/develsoftware/GMinerRelease
+
+[Service]
+TimeoutStartSec=5
+Type=exec
+#ExecStart=/opt/gminer/miner --algo kawpow --server stratum+tcp://kawpow.auto.nicehash.com:9200 --user 33HyUyhkdAsbTo1p3eBRCQBAxex6WWgaL7.icebox -i 75 > /opt/gminer/logs/idle_miner.log 2>&1
+ExecStart=/bin/bash -c '/opt/gminer/miner --algo kawpow --server stratum+tcp://kawpow.auto.nicehash.com:9200 --user 33HyUyhkdAsbTo1p3eBRCQBAxex6WWgaL7.icebox -i 75 > /opt/gminer/logs/idle_miner.log 2>&1'
+Restart=always
+RestartSec=5s
+LimitNOFILE=1000000
+
+[Install]
+WantedBy=default.target

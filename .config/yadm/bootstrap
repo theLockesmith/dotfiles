@@ -33,6 +33,10 @@ configure_vim() {
 }
 
 configure_tmux() {
+  CUR_DIR=$(pwd)
+  cd ~
+  ln -s -f .tmux/.tmux.conf
+  cd $CUR_DIR
   ~/.tmux/plugins/tpm/bin/install_plugins
 }
 
@@ -43,7 +47,6 @@ install_submodules() {
     git checkout custom-submodules
     git submodule update --init --recursive
     cd $CUR_DIR
-    
 }
 
 install_submodules

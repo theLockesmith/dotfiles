@@ -623,20 +623,6 @@ alias shasum="sha1sum"
 ## export byobu prefix
 export BYOBU_PREFIX=/usr
 
-## export locale for nix
-export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
-export NIX_PATH=$HOME/.nix-defexpr/channels
-export NIX_PATH=$NIX_PATH:nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixpkgs:/nix/var/nix/profiles/per-user/root/channels:~/.nix-defexpr/channels
-export NIX_PATH=$NIX_PATH:$HOME/.config
-export NIX_CONFIG="experimental-features = nix-command flakes"
-
-## hook nix-direnv
-#source $HOME/.config/direnv/direnvrc
-eval "$(direnv hook bash)"
-
 #neofetch --color_blocks off
 #fortune | cowsay-rando | lolcat
 random-bash-greeting
-
-# Load extra profile. Keep this line at the end.
-source $HOME/.localprofile

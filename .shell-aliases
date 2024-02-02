@@ -59,7 +59,6 @@ alias randosay='cowsay-rando'
 alias weechat='ssh -t docker docker attach weechat'
 
 ## Editors ##
-alias vi='$HOME/.scripts/vi'
 alias code='codium '
 
 ## Navigation ##

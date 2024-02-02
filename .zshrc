@@ -39,6 +39,12 @@ if [[ $EUID != 0 ]]; then
       source $HOME/.local/bin/virtualenvwrapper.sh
     fi
   fi
+  if [[ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]]; then
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+  fi
+  if [[ -f "/usr/bin/virtualenvwrapper.sh" ]]; then
+    source /usr/bin/virtualenvwrapper.sh
+  fi
 fi
 
 [[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt
@@ -113,10 +119,10 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   ${RUN}
 fi
 
-if [[ -f ~/.profile ]]; then
-  . ~/.profile
-fi
-
+test -r ~/.profile && source ~/.profile
+test -r ~/.shell-common && source ~/.shell-common
+test -r ~/.shell-env && source ~/.shell-env
+test -r ~/.shell-aliases && source ~/.shell-aliases
 ## Remove Python virtual environment from path so it's not added multiple times. ##
 PATH="${PATH//$VIRTUAL_ENV_OLD}"
 

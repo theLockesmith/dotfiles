@@ -1,6 +1,3 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/theLockesmith/.tmux.git
-[submodule "dotfiles/kickstart.nvim"]
-	path = dotfiles/kickstart.nvim
-	url = https://github.com/theLockesmith/kickstart.nvim.git

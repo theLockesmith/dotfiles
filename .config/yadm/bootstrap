@@ -36,6 +36,18 @@ configure_tmux() {
   ~/.tmux/plugins/tpm/bin/install_plugins
 }
 
+install_submodules() {
+    CUR_DIR=$(pwd)
+    yadm submodule update --init --recursive
+    cd ~/.oh-my-zsh
+    git checkout custom-submodules
+    git submodule update --init --recursive
+    cd $CUR_DIR
+    
+}
+
+install_submodules
+
 install_nix
 
 configure_vim

@@ -123,6 +123,8 @@ test -r ~/.profile && source ~/.profile
 test -r ~/.shell-common && source ~/.shell-common
 test -r ~/.shell-env && source ~/.shell-env
 test -r ~/.shell-aliases && source ~/.shell-aliases
+#test -r ~/.tmux/.tmux.conf && tmux source-file ~/.tmux/.tmux.conf
+
 ## Remove Python virtual environment from path so it's not added multiple times. ##
 PATH="${PATH//$VIRTUAL_ENV_OLD}"
 

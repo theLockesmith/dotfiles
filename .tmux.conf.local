@@ -478,6 +478,6 @@ unbind '"'
 unbind %
 
 # Reload config
-bind r source-file ~/.tmux.conf
+bind r source-file ~/.tmux/.tmux.conf
 
 bind-key Tab select-pane -t :.+

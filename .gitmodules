@@ -1,9 +1,6 @@
 [submodule ".liquidprompt"]
 	path = .liquidprompt
 	url = https://github.com/theLockesmith/liquidprompt.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/theLockesmith/ohmyzsh.git
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/theLockesmith/.tmux.git

@@ -126,11 +126,6 @@ test -r ~/.shell-aliases && source ~/.shell-aliases
 ## Remove Python virtual environment from path so it's not added multiple times. ##
 PATH="${PATH//$VIRTUAL_ENV_OLD}"
 
-## NVM ##
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 alias shasum="sha1sum"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

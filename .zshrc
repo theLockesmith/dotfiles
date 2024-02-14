@@ -87,7 +87,7 @@ VIRTUAL_ENV_OLD=""
 [[ "$VIRTUAL_ENV" ]] && VIRTUAL_ENV_OLD="$VIRTUAL_ENV/bin"
 
 ## Load scripts ##
-export PATH="$PATH:$HOME/.scripts:$HOME/.localscripts"
+export PATH="$PATH:$HOME/.scripts:$HOME/.localscripts:$HOME/.local"
 
 ## Load /snap/bin ##
 export PATH="$PATH:/usr/sbin:/snap/bin:/sbin/:/usr/local/bin/:/usr/local/sbin/:$HOME/.local/bin"

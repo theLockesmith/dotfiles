@@ -90,7 +90,7 @@ VIRTUAL_ENV_OLD=""
 export PATH="$PATH:$HOME/.scripts:$HOME/.localscripts:$HOME/.local"
 
 ## Load /snap/bin ##
-export PATH="$PATH:/usr/sbin:/snap/bin:/sbin/:/usr/local/bin/:/usr/local/sbin/:$HOME/.local/bin"
+export PATH="$PATH:/usr/sbin:/snap/bin:/sbin/:/usr/local/bin/:/usr/local/sbin/:$HOME/.local/pipx/venvs/ansible/bin/"
 
 ## Load /usr/share for LaTeX ##
 export PATH="$PATH:/usr/share/texlive"

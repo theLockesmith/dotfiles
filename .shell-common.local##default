@@ -11,5 +11,5 @@ export XDG_DATA_DIRS="$BREW_PREFIX/share:$XDG_DATA_DIRS"
 ##
 
 # TODO: How to make it conditional in a nice way?
-glibcLocales=$(nix-build --no-out-link "<nixpkgs>" -A glibcLocales)
+test -r nix-builds && glibcLocales=$(nix-build --no-out-link "<nixpkgs>" -A glibcLocales)
 export LOCALE_ARCHIVE="${glibcLocales}/lib/locale/locale-archive"

@@ -51,7 +51,7 @@ if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
 fi
 
 # Begin added by argcomplete
-fpath=( /home/forgemaster/.local/pipx/venvs/ansible/lib/python3.10/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
+fpath=( $HOME.local/pipx/venvs/ansible/lib/python3.10/site-packages/argcomplete/bash_completion.d "${fpath[@]}" )
 # End added by argcomplete
 
-if [ -e /home/forgemaster/.nix-profile/etc/profile.d/nix.sh ]; then . /home/forgemaster/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

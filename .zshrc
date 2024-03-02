@@ -71,13 +71,17 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+unsetopt inc_append_history
+unsetopt share_history
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=100000
+setopt append_history
+setopt hist_ignore_dups
+
+HISTFILE=~/.zsh_history_$$
+
+# History Length
+HISTSIZE=10000
+SAVEHIST=1000000
 
 ## RVM is a bit of a pain... Save this variable later so it can be prepended to PATH ##
 GEM_HOME_OLD=""

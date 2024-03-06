@@ -55,6 +55,9 @@ alias switch='nix-collect-garbage; home-manager switch; tmux kill-server; exec b
 alias cowsay-rando='$HOME/.scripts/cowsay-rando'
 alias randosay='cowsay-rando'
 
+## KDE ##
+alias save-session="qdbus org.kde.ksmserver /KSMServer saveCurrentSession"
+
 ## Remote weechat ##
 alias weechat='ssh -t docker docker attach weechat'
 

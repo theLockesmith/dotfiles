@@ -77,7 +77,7 @@ unsetopt share_history
 setopt append_history
 setopt hist_ignore_dups
 
-HISTFILE=~/.zsh_history_$$
+HISTFILE=~/.zsh_history
 
 # History Length
 HISTSIZE=10000

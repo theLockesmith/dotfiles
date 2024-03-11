@@ -1,3 +1,6 @@
+# Kayobe
+export KAYOBE_CONFIG_PATH="$HOME/stack/openstack/src/kayobe-config/etc/kayobe"
+
 # kdesrc-build #################################################################
 
 ## Add kdesrc-build to PATH

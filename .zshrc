@@ -91,7 +91,7 @@ VIRTUAL_ENV_OLD=""
 [[ "$VIRTUAL_ENV" ]] && VIRTUAL_ENV_OLD="$VIRTUAL_ENV/bin"
 
 ## Load scripts ##
-export PATH="$PATH:$HOME/.scripts:$HOME/.localscripts:$HOME/.local"
+export PATH="$PATH:$HOME/.scripts:$HOME/.localscripts:$HOME/.local:$HOME/.local/bin"
 
 ## Load /snap/bin ##
 export PATH="$PATH:/usr/sbin:/snap/bin:/sbin/:/usr/local/bin/:/usr/local/sbin/:$HOME/.local/pipx/venvs/ansible/bin/"

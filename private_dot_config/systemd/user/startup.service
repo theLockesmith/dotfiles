@@ -1,0 +1,11 @@
+[Unit]
+Description=Startup service
+
+[Service]
+ExecStart=/home/forgemaster/startup/start.sh
+Type=simple
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

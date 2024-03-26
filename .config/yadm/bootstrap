@@ -50,7 +50,7 @@ install_submodules() {
 
 install_submodules
 
-install_nix
+#install_nix
 
 configure_vim
 configure_tmux

@@ -127,17 +127,20 @@ function set_kube_context_alias() {
   # Get the current context
   local current_context=$(kubectl config current-context 2>/dev/null)
 
-  # define the path to the context-specific scripts or binaries
+  # Define the path to the context-specific scripts or binaries
   local context_script_path="$HOME/.kube/contexts/$current_context/kubectl.sh"
   local context_binary_path="$HOME/.kube/contexts/$current_context/kubectl"
 
   # Check if the current context matches a known context
   if [[ -f "$context_script_path" ]]; then
     alias kubectl="$context_script_path"
+    export KUBECTL_PATH="$context_script_path"
   elif [[ -f "$context_binary_path" ]]; then
     alias kubectl="$context_binary_path"
+    export KUBECTL_PATH="$context_binary_path"
   else
     alias kubectl="/usr/local/bin/kubectl"
+    export KUBECTL_PATH="/usr/local/bin/kubectl"
   fi
 }
 

@@ -71,16 +71,20 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-unsetopt inc_append_history
-unsetopt share_history
+#unsetopt inc_append_history
+#unsetopt share_history
+#
+#setopt append_history
+#setopt hist_ignore_dups
 
 setopt append_history
-setopt hist_ignore_dups
+setopt inc_append_history
+unsetopt share_history
 
 HISTFILE=~/.zsh_history
 
 # History Length
-HISTSIZE=10000
+HISTSIZE=1000000
 SAVEHIST=1000000
 
 ## RVM is a bit of a pain... Save this variable later so it can be prepended to PATH ##
@@ -126,6 +130,7 @@ test -r ~/.shell-common && source ~/.shell-common
 test -r ~/.shell-env && source ~/.shell-env
 test -r ~/.shell-aliases && source ~/.shell-aliases
 #test -r ~/.tmux/.tmux.conf && tmux source-file ~/.tmux/.tmux.conf
+[ -d ~/.localrc ] && for file in ~/.localrc/*; do [ -f "$file" ] && source "$file"; done
 
 ## Remove Python virtual environment from path so it's not added multiple times. ##
 PATH="${PATH//$VIRTUAL_ENV_OLD}"

@@ -33,6 +33,7 @@ alias wine='wine 2>~/.wine.error.log'
 alias tclock='tty-clock -s -c -t -n -C 5'
 alias matrix='cmatrix -a -C magenta'
 alias matrixr='cmatrix -a -r'
+alias watch='CLICOLOR_FORCE=true watch --color'
 
 ## Shortcuts ##
 alias resh='. ~/.bashrc'

@@ -36,7 +36,7 @@ alias matrixr='cmatrix -a -r'
 alias watch='CLICOLOR_FORCE=true watch --color'
 
 ## Shortcuts ##
-alias resh='. ~/.bashrc'
+alias resh='. ~/.zshrc'
 alias c='clear'
 alias dist='echo -e $OS'
 alias l='ls'

@@ -56,6 +56,9 @@ alias switch='nix-collect-garbage; home-manager switch; tmux kill-server; exec b
 alias cowsay-rando='$HOME/.scripts/cowsay-rando'
 alias randosay='cowsay-rando'
 
+## OpenStack ##
+alias openstack="/home/forgemaster/.virtualenvs/openstack/bin/openstack"
+
 ## KDE ##
 alias save-session="qdbus org.kde.ksmserver /KSMServer saveCurrentSession"
 

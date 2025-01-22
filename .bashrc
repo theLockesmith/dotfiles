@@ -626,3 +626,4 @@ export BYOBU_PREFIX=/usr
 #neofetch --color_blocks off
 #fortune | cowsay-rando | lolcat
 random-bash-greeting
+. "$HOME/.cargo/env"

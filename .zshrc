@@ -103,6 +103,8 @@ export PATH="$PATH:/usr/sbin:/snap/bin:/sbin/:/usr/local/bin/:/usr/local/sbin/:$
 ## Load /usr/share for LaTeX ##
 export PATH="$PATH:/usr/share/texlive"
 
+export XDG_DATA_DIRS="/usr/share:$XDG_DATA_DIRS"
+
 ###**##################################################**###
 ## **                IF YOU USE RVM:                   ** ##
 ## ** REMOVE THIS LINE FROM .profile AND .bash_profile ** ##

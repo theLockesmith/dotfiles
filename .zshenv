@@ -58,4 +58,6 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 
 if [ -e /home/forgemaster/.nix-profile/etc/profile.d/nix.sh ]; then . /home/forgemaster/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-test -r "$HOME/.cargo/env" && source "$HOME/.cargo/env"
+if [[ -d "$HOME/.local" ]]; then
+  test -r "$HOME/.cargo/env" && source "$HOME/.cargo/env"
+fi

@@ -57,4 +57,5 @@ fpath=( $HOME.local/pipx/venvs/ansible/lib/python3.10/site-packages/argcomplete/
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 if [ -e /home/forgemaster/.nix-profile/etc/profile.d/nix.sh ]; then . /home/forgemaster/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-. "$HOME/.cargo/env"
+
+test -r "$HOME/.cargo/env" && source "$HOME/.cargo/env"

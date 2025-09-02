@@ -353,7 +353,7 @@ tmux_conf_copy_to_os_clipboard=false
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 50000
 
 # start with mouse mode enabled
 #set -g mouse on
@@ -473,3 +473,16 @@ bind C-Right swap-window -t +1
 bind r source-file ~/.tmux/.tmux.conf
 
 bind-key Tab select-pane -t :.+
+
+set -g status-interval 0
+
+# Fix the clipboard for KDE
+# KDE on X11 clipboard setup
+set -g set-clipboard on
+set -s copy-command 'xsel --clipboard --input'
+
+# Vim-style bindings
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xsel --clipboard --input'
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel 'xclip -selection clipboard -i'
+

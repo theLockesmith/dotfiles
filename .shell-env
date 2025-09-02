@@ -8,6 +8,7 @@ export GIT_EDITOR="$EDITOR"
 export USE_EDITOR="$EDITOR"
 export VISUAL=$EDITOR
 export PAGER=less
+export QT_QPA_PLATFORM=offscreen
 
 ##
 ## Pager

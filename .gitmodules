@@ -1,6 +1,6 @@
 [submodule ".tmux"]
-	path = .tmux
+	path = tmux/.tmux
 	url = https://github.com/theLockesmith/.tmux.git
 [submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+	path = zsh/.oh-my-zsh
 	url = https://github.com/theLockesmith/ohmyzsh.git

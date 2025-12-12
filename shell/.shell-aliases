@@ -124,6 +124,12 @@ alias df='df -H'
 alias pip-update='cat requirements.txt | xargs -n 1 python3 -m pip install'
 
 #######################
+## Kubernetes stuff  ##
+#######################
+alias oc-autism='KUBECONFIG=~/claude/autism/kubeconfig oc'
+alias oc-atlantis='KUBECONFIG=~/claude/atlantis/kubeconfig oc'
+
+#######################
 ## preexec_functions ##
 #######################
 ## Function to set or unset the alias based on the current Kubernetes context.
@@ -151,3 +157,4 @@ function set_kube_context_alias() {
 # Hook the function to the preexec event to check before every command
 set_kube_context_alias
 preexec_functions+=('set_kube_context_alias')
+
